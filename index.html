@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投資回収期間計算アプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>投資回収期間計算アプリ</h1>
+        <form id="recovery-form">
+            <div class="form-group">
+                <label for="similar-store">類似店舗:</label>
+                <select id="similar-store">
+                    <option value="千住大橋駅北">千住大橋駅北</option>
+                    <option value="千住中居町">千住中居町</option>
+                    <option value="綾瀬２丁目">綾瀬２丁目</option>
+                    <option value="足立興野１丁目">足立興野１丁目</option>
+                    <option value="足立栗原">足立栗原</option>
+                    <option value="足立弘道">足立弘道</option>
+                    <option value="綾瀬駅西">綾瀬駅西</option>
+                    <option value="足立新田２丁目">足立新田２丁目</option>
+                    <option value="足立中川４丁目">足立中川４丁目</option>
+                    <option value="竹の塚４丁目">竹の塚４丁目</option>
+                    <option value="千住緑町３丁目">千住緑町３丁目</option>
+                    <option value="足立本木">足立本木</option>
+                    <option value="パサージオ西新井">パサージオ西新井</option>
+                    <option value="六町駅前">六町駅前</option>
+                    <option value="綾瀬南">綾瀬南</option>
+                    <option value="千住柳町">千住柳町</option>
+                    <option value="足立４丁目">足立４丁目</option>
+                    <option value="梅島駅前">梅島駅前</option>
+                    <option value="足立六月３丁目">足立六月３丁目</option>
+                    <option value="足立西新井４丁目">足立西新井４丁目</option>
+                    <option value="西新井駅西口">西新井駅西口</option>
+                    <option value="扇大橋駅東">扇大橋駅東</option>
+                    <option value="北千住駅東">北千住駅東</option>
+                    <option value="綾瀬１丁目">綾瀬１丁目</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="initial-investment">初期投資額:</label>
+                <input type="number" id="initial-investment" value="1000000">
+            </div>
+
+            <div class="form-group">
+                <label for="monthly-rent">月額賃料:</label>
+                <input type="number" id="monthly-rent" value="100000">
+            </div>
+
+            <div class="form-group">
+                <label for="contract-area">契約面積:</label>
+                <input type="number" id="contract-area" value="50">
+            </div>
+
+            <div class="form-group">
+                <label for="contract-period">契約期間（月）:</label>
+                <input type="number" id="contract-period" value="24">
+            </div>
+
+            <div class="form-group">
+                <label for="monthly-expense">月間運営費:</label>
+                <input type="number" id="monthly-expense" value="200000">
+            </div>
+
+            <div class="form-group">
+                <label for="monthly-sales">予想月間売上:</label>
+                <input type="number" id="monthly-sales" value="500000">
+            </div>
+
+            <button type="button" class="btn" onclick="calculateRecoveryPeriod()">計算する</button>
+        </form>
+
+        <h2>結果</h2>
+        <p id="result"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
